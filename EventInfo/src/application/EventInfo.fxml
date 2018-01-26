@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="300.0" style="-fx-background-color: #262626;" stylesheets="@application.css" type="Pane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Line endX="299.0" focusTraversable="true" layoutX="0.5" layoutY="100.0" stroke="#95989a" strokeWidth="0.5" />
+      <JFXTextField fx:id="eventName" focusColor="#262626" layoutX="15.0" layoutY="6.0" prefWidth="150.0" promptText="New Event" unFocusColor="#262626">
+         <font>
+            <Font name="SF Pro Text Medium" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="loc" focusColor="#262626" layoutX="15.0" layoutY="37.0" prefHeight="55.0" prefWidth="150.0" promptText="Add Location" unFocusColor="#262626" wrapText="true">
+         <font>
+            <Font name="SF Pro Text Regular" size="13.0" />
+         </font>
+      </JFXTextArea>
+      <ImageView fx:id="mail" fitHeight="45.0" fitWidth="75.0" layoutX="214.0" layoutY="11.0" onMouseClicked="#sendMail" preserveRatio="true">
+         <image>
+            <Image url="@../resources/Mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bell" fitHeight="34.0" fitWidth="28.0" layoutX="260.0" layoutY="60.0" onMouseClicked="#setAlarm" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/Bell.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="silent" fitHeight="34.0" fitWidth="28.0" layoutX="260.0" layoutY="60.0" onMouseClicked="#setAlarm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/Silent.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="15.0" layoutY="100.0" prefHeight="40.0" prefWidth="285.0" spacing="5.0">
+         <children>
+            <Label fx:id="date" text="MMM DD, YYYY" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" text="HH:MM AM to HH:MM PM" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Text Regular" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Line endX="299.0" layoutX="0.5" layoutY="140.0" stroke="#95989a" strokeWidth="0.5" />
+      <JFXTextArea fx:id="notes" focusColor="#262626" layoutX="14.0" layoutY="147.0" prefHeight="55.0" prefWidth="280.0" promptText="Add Notes" style="-fx-prompt-text-fill: #4C4C4C;" unFocusColor="#262626" wrapText="true">
+         <font>
+            <Font name="SF Pro Text Regular" size="13.0" />
+         </font>
+      </JFXTextArea>
+   </children>
+</fx:root>
