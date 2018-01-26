@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="event" alignment="TOP_LEFT" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="167.0" onMouseClicked="#setFocus" onMouseDragged="#resize" onMouseMoved="#changeCursor" onMousePressed="#recordCoordinates" prefHeight="51.0" prefWidth="167.0" type="StackPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle fx:id="rect1" fill="#007aff" height="51.0" onMouseDragged="#move" opacity="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="167.0" />
+      <Rectangle fx:id="rect2" fill="#007aff" height="51.0" layoutX="10.0" layoutY="10.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="2.5" />
+      <Label fx:id="label1" prefHeight="17.0" prefWidth="150.0" text="00:00 AM" textFill="WHITE" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font name="SF Pro Text Regular" size="13.0" />
+         </font>
+         <StackPane.margin>
+            <Insets left="10.0" top="2.0" />
+         </StackPane.margin>
+      </Label>
+      <Label fx:id="label2" prefHeight="17.0" prefWidth="150.0" text="New Event" textFill="WHITE">
+         <font>
+            <Font name="SF Pro Text Semibold" size="13.0" />
+         </font>
+         <StackPane.margin>
+            <Insets left="10.0" top="25.0" />
+         </StackPane.margin>
+      </Label>
+      <Label fx:id="label3" prefHeight="17.0" prefWidth="150.0" text="Location" textFill="WHITE" visible="false">
+         <font>
+            <Font name="SF Pro Text Regular" size="13.0" />
+         </font>
+         <StackPane.margin>
+            <Insets left="10.0" top="40.0" />
+         </StackPane.margin>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</fx:root>
