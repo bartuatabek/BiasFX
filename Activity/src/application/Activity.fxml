@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="39.0" prefWidth="360.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #262626;" type="Pane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group layoutX="5.0" layoutY="1.0">
+         <children>
+            <Label fx:id="begins" layoutX="2.0" prefHeight="17.0" prefWidth="44.0" text="12:00 AM" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="ends" layoutX="2.0" layoutY="20.0" prefHeight="17.0" prefWidth="44.0" text="12:00 AM" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Label fx:id="activityName" layoutX="56.0" layoutY="11.0" prefHeight="17.0" prefWidth="120.0" text="Activity Name" textFill="WHITE">
+         <font>
+            <Font name="SF Pro Display Medium" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Location" layoutX="192.0" layoutY="11.0" prefHeight="17.0" prefWidth="120.0" text="Location" textFill="WHITE">
+         <font>
+            <Font name="SF Pro Display Medium" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="bell" fitHeight="27.0" fitWidth="26.0" layoutX="324.0" layoutY="6.0" onMouseClicked="#setAttending" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/Bell.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="silent" fitHeight="30.0" fitWidth="30.0" layoutX="322.0" layoutY="5.0" onMouseClicked="#setAttending" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/Silent.png" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>
