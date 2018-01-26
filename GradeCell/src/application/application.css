@@ -1,0 +1,76 @@
+/*
+  * Custom combo box styling
+  */
+  .combo-box .list-cell 
+{
+    -fx-background: #464646;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view 
+{
+    -fx-background-color: #464646, #464646;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+    /* No alternate highlighting */
+    -fx-background-color: #464646;
+}
+
+.combo-box .arrow, .combo-box .arrow-button{
+    -fx-background-color: transparent;
+}
+
+/* Changes the look of context menu */ 
+.context-menu {
+  -fx-background-color: #262626;
+  -fx-text-fill: white; 
+  -fx-background-radius: 5;
+  -fx-border-radius: 5;
+}
+
+.context-menu .separator{
+	-fx-background-color: #4a4c51;
+}
+
+.menu-item .label {
+  -fx-text-fill: #b3b3b3;
+}
+
+.menu-item:focused .label {
+  -fx-text-fill: white;
+}
+
+.pagination {
+    -fx-border-color: #262626;
+    -fx-page-information-visible: false;
+}
+ 
+.pagination .page {
+    -fx-background-color: #262626;
+}
+ 
+.pagination .pagination-control {
+    -fx-background-color: #262626; 
+}
+
+
+.pagination .button {
+	-fx-background-color: transparent;
+}
+ 
+.pagination .pagination-control .bullet-button {
+    -fx-background-color: transparent, transparent, transparent, transparent, #4A4A4A;
+}
+ 
+.pagination .pagination-control .bullet-button:selected {   
+    -fx-background-color: transparent, transparent, transparent, transparent, #FFFFFF;
+}
+ 
+.pagination .pagination-control .left-arrow, .right-arrow {
+    -fx-background-color: transparent, transparent;
+}
