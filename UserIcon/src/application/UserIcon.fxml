@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="userPane" alignment="CENTER" spacing="15.0" type="VBox" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fx:id="icon" onMouseClicked="#select" radius="50.0" stroke="#007aff" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" proportional="false" radius="0.4642857142857143">
+               <stops>
+                  <Stop color="#838383" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Circle>
+      <Label fx:id="username" alignment="CENTER" focusTraversable="false" text="User Name" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SF Pro Display Light" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>
