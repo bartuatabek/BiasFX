@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.CircularProgressIndicator?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="root" style="-fx-background-color: black;" stylesheets="@application.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="assPane" maxHeight="282.0" maxWidth="399.0" minHeight="82.0" minWidth="399.0" onMouseClicked="#peekAssInfo" prefHeight="82.0" prefWidth="399.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #262626;">
+         <children>
+            <Label fx:id="assName" layoutX="101.0" layoutY="5.0" prefHeight="19.0" prefWidth="220.0" text="Assignment Name" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Semibold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="32.0" text="Info:" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="52.0" text="Due:" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="12.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ff3b30" height="60.0" layoutX="326.0" layoutY="12.0" strokeType="INSIDE" strokeWidth="10.0" width="60.0" />
+            <Label fx:id="remainingDays" alignment="CENTER" layoutX="327.0" layoutY="17.0" onMouseEntered="#showDelete" prefHeight="50.0" prefWidth="58.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="40.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="delAss" layoutX="320.0" layoutY="12.0" onMouseClicked="#setRemoved" onMouseExited="#hideDelete" prefHeight="60.0" prefWidth="72.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ff3b30" height="60.0" strokeType="INSIDE" strokeWidth="10.0" width="60.0" />
+                  <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/trash.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Circle centerX="48.0" centerY="41.0" fill="#4ed96519" radius="35.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle centerX="48.0" centerY="41.0" fill="#262626" radius="27.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <CircularProgressIndicator fx:id="ring" layoutX="13.0" layoutY="6.0" prefHeight="70.0" prefWidth="70.0" progress="-1.0" roundLineCap="true" />
+            <Label fx:id="percentage" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="21.0" prefHeight="40.0" prefWidth="50.0" text="\%0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="assInfo" layoutX="128.0" layoutY="32.0" prefWidth="175.0" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="assDue" layoutX="128.0" layoutY="52.0" prefWidth="175.0" textFill="WHITE">
+               <font>
+                  <Font name="SF Pro Display Regular" size="12.0" />
+               </font>
+            </Label>
+            <JFXSlider fx:id="progress" layoutX="32.0" layoutY="100.0" prefHeight="15.0" prefWidth="333.0" visible="false" />
+            <JFXTextField fx:id="assNameT" focusColor="#007aff" layoutX="10.0" layoutY="124.0" prefHeight="30.0" prefWidth="261.0" promptText=" Assignment Name" unFocusColor="WHITE" visible="false">
+               <font>
+                  <Font name="SF Pro Text Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField fx:id="assInfoT" focusColor="#007aff" layoutX="10.0" layoutY="171.0" prefHeight="30.0" prefWidth="261.0" promptText=" Info" unFocusColor="WHITE" visible="false">
+               <font>
+                  <Font name="SF Pro Text Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <JFXDatePicker fx:id="assDueT" defaultColor="#007aff" layoutX="10.0" layoutY="220.0" prefHeight="30.0" prefWidth="261.0" promptText=" Due" visible="false" />
+            <JFXButton fx:id="cancel" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="171.0" onAction="#cancelAss" prefHeight="30.0" prefWidth="59.0" ripplerFill="TRANSPARENT" style="-fx-background-color: #262626; -fx-background-radius: 100; -fx-border-color: white; -fx-border-radius: 100;" text="Cancel" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="SF Pro Display Regular" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="220.0" onAction="#saveAss" prefHeight="30.0" prefWidth="59.0" ripplerFill="TRANSPARENT" style="-fx-background-color: #262626; -fx-background-radius: 100; -fx-border-color: white; -fx-border-radius: 100;" text="Save" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="SF Pro Display Regular" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</fx:root>
